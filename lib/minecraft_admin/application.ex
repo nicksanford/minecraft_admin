@@ -7,8 +7,7 @@ defmodule MinecraftAdmin.Application do
 
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: MinecraftAdmin.Worker.start_link(arg)
-      # {MinecraftAdmin.Worker, arg}
+      {MinecraftAdmin.DiscordConsumer.Supervisor, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
