@@ -42,12 +42,12 @@ RUN apt-get update && \
 
 
 # This copies our app source code into the build container
-COPY config .
-COPY lib .
+COPY config config
+COPY lib lib
 COPY mix.exs .
 COPY mix.lock .
-COPY rel .
-COPY test .
+COPY rel rel
+COPY test test
 
 RUN mix do deps.get, deps.compile, compile
 
